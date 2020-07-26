@@ -17,6 +17,9 @@ body {
 .p-t-40 {
     padding-top: 40px;
 }
+.p-l-40 {
+    margin-left: 40px;
+}
 
 .border10 {
     border-style: solid;
@@ -140,5 +143,38 @@ tr:nth-child(even) {
   .topnav a.active {
     background-color: #6684C4;
     color: white;
+  }
+  
+
+  .sidenav {
+    height: 90%;
+    width: 300px;
+    position: absolute;
+    z-index: 1;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    padding-top: 30px;
+  }
+  
+  .sidenav a {
+    padding: 6px 6px 6px 32px;
+    text-decoration: none;
+    font-size: 19px;
+    color: #818181;
+    display: block;
+  }
+  
+  .sidenav a:hover {
+    color: #f1f1f1;
+  }
+  
+  .main {
+    margin-left: 200px; /* Same as the width of the sidenav */
+  }
+  
+  @media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
   }
   

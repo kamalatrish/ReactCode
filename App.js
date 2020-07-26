@@ -1,8 +1,10 @@
 import Header from './src/Header/headerComponent'
-import IndexComponent from './src/Routes/MobileKart/home'
-import Product from './src/Routes/MobileKart/product'
 import LoginComponent from './src/Routes/login'
-import AssessmentIndex from './src/Routes/Assessment/assessmentIndex'
+import Home from './src/Routes/home'
+import ApiClass from './src/Routes/apiClass'
+import ApiHook from './src/Routes/apiHook'
+import UserClass from './src/Routes/userClass'
+import UserHook from './src/Routes/userHook'
 import React from "react";
 import {
   BrowserRouter as Router,
@@ -17,14 +19,23 @@ export default function App() {
       <div>
         <Header />
         <Switch>
-          <Route path="/product">
-            <Product />
+          <Route path="/Home">
+            <Home />
           </Route>
-          <Route path="/index">
-            <IndexComponent />
+          <Route path="/ApiClass">
+            <ApiClass />
           </Route>
-          <Route path="/assessmentIndex">
-            <AssessmentIndex />
+          <Route path="/ApiHook">
+            <ApiHook />
+          </Route>
+          <Route path="/ApiHook">
+            <ApiHook />
+          </Route>
+          <Route path="/UserClass">
+            <UserClass />
+          </Route>
+          <Route path="/UserHook">
+            <UserHook />
           </Route>
           <Route path="/">
             <LoginComponent />

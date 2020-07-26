@@ -1,18 +1,15 @@
 import React from 'react';
 import axios from 'axios';
-export default class AssessmentAllPosts extends React.Component {
+export default class allPost extends React.Component {
     constructor(props) {
         super(props);
-    }
-    onClickFunction=(index)=>{
-        this.props.buttonAction("specificPost",true)
-        this.props.setSelectedPostIndex(index)
-    }
 
+    }
+    componentDidMount(){
+        console.log(this.props)
+    }
     render() {
         return (
-            <div className="container fluid">
-                All the posts displayed here !!!!
                 <table>
                     <tr>
                         <th>Post Id</th>
@@ -21,7 +18,7 @@ export default class AssessmentAllPosts extends React.Component {
                     </tr>
                     {this.props.postDataProp.map((postItem, index) => {
                         return (
-                            <tr key={index} onClick={() => this.onClickFunction(index)}>
+                            <tr key={index}>
                                 <td>{postItem.id}</td>
                                 <td>{postItem.userId}</td>
                                 <td>{postItem.title}</td>
@@ -29,7 +26,6 @@ export default class AssessmentAllPosts extends React.Component {
                         )
                     })}
                 </table>
-            </div>
         );
     }
 }

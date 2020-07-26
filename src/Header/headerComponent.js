@@ -14,9 +14,9 @@ export default class Header extends React.Component {
         return (
             <div>
                 <div className="topnav">
-                    <a className="active" href="/">E-Kart</a>
-                    <a>News</a>
-                    <a>Contact</a>
+                    <a className="active" href="/">Home Tab</a>
+                    {/* <a>Tab 1</a>
+                    <a>Tab 2</a> */}
                     <a className="rightAlign">Version : 1.0</a>
                 </div>
             </div>
